@@ -4,6 +4,7 @@ import com.example.musinsa_clone.test.testEntity.Category;
 import com.example.musinsa_clone.test.testEntity.Product;
 import com.example.musinsa_clone.test.testRepository.CategoryRepository;
 import com.example.musinsa_clone.test.testRepository.ProductRepository;
+import com.example.musinsa_clone.test.web.dto.ProductRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
