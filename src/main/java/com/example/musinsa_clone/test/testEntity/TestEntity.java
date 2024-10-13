@@ -1,4 +1,4 @@
-package com.example.musinsa_clone.test;
+package com.example.musinsa_clone.test.testEntity;
 
 import com.example.musinsa_clone.domain.baseEntity.BaseEntity;
 import jakarta.persistence.Entity;
