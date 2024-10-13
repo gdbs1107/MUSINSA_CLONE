@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Product {
+public class TestProduct {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +18,7 @@ public class Product {
     // 카테고리와의 관계 (Many-to-One 관계)
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
-    private Category category;
+    private TestCategory testCategory;
 
     // getters, setters
 }
