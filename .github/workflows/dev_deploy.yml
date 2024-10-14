@@ -2,8 +2,8 @@ name: musinsa_clone CI/CD
 
 on:
   pull_request:
-    types: [closed]
-  workflow_dispatch:
+    branches:
+      - develop
 
 jobs:
   build:
