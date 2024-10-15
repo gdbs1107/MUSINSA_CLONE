@@ -2,13 +2,13 @@ name: musinsa_clone CD
 
 on:
   pull_request:
-    types: [closed]
+    branches:
+      - production
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'production' #특정 브랜치를 지정해서 발동
 
 
     steps:
