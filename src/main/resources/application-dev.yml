@@ -3,7 +3,7 @@ spring:
     name: musinsa_clone
   config:
     activate:
-      on-profile: local
+      on-profile: dev
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
