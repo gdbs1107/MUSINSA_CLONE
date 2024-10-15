@@ -7,6 +7,8 @@ import lombok.Data;
 @Data
 public class Product {
 
+    //실제 엔티티 설계 시에는 훨씬 자세하게 설계하기
+    //column 설정과 같은 내부제약조건
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

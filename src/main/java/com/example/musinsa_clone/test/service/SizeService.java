@@ -16,6 +16,9 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class SizeService {
 
+    //실제로 서비스 만들때엔 각 제품의 카테고리와 입력 사이즈의 카테고리가 일치하는지 검증하는 로직
+    //*********반드시 필요함*********
+
     private final ProductRepository productRepository;
     private final TopSizeRepository topSizeRepository;
     private final BottomSizeRepository bottomSizeRepository;
@@ -37,6 +40,7 @@ public class SizeService {
         Product product = productRepository.findById(productId)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid product ID"));
 
+        //빌더 패턴으로 바꾸고
         TopSize topSize = new TopSize();
         topSize.setChestSize(topSizeRequest.getChestSize());
         topSize.setSleeveLength(topSizeRequest.getSleeveLength());
