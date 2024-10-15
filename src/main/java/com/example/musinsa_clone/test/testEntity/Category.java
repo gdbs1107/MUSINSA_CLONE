@@ -1,5 +1,6 @@
 package com.example.musinsa_clone.test.testEntity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -23,6 +24,7 @@ public class Category {
 
     // 하위 카테고리 (2차 카테고리들)
     @OneToMany(mappedBy = "parentCategory")
+    @JsonIgnore
     private List<Category> subCategories = new ArrayList<>();
 }
 
