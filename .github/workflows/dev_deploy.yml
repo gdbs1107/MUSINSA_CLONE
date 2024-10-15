@@ -1,4 +1,4 @@
-name: musinsa_clone CI/CD
+name: musinsa_clone CI
 
 on:
   pull_request:
