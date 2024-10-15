@@ -59,8 +59,12 @@
 
 
 ## ERD (업데이트 중)
-- 회원관련 ERD 생성
+ 회원관련 ERD 생성
 <img width="984" alt="KakaoTalk_Photo_2024-10-09-21-48-11" src="https://github.com/user-attachments/assets/1a36e468-2724-400b-8209-ed6873889bb6">
+<br>
+상품관련 ERD 생성
+<img width="890" alt="스크린샷 2024-10-15 오후 1 38 30" src="https://github.com/user-attachments/assets/362d9e12-cad4-49e5-9bd1-3b1dd3550786">
+
 
 
 
