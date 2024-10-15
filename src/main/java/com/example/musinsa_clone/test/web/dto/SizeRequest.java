@@ -13,6 +13,10 @@ public class SizeRequest {
                 format = "string"
         )
         private String chestSize;  // 가슴 사이즈
+        @Schema(
+                description = "소매길이 사이즈를 입력해주세요",
+                format = "string"
+        )
         private String sleeveLength;  // 소매 길이
 
 
