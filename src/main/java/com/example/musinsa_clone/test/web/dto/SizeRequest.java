@@ -8,6 +8,10 @@ public class SizeRequest {
     @Getter
     public static class TopSizeRequest{
 
+        @Schema(
+                description = "흉곽 사이즈를 입력해주세요",
+                format = "string"
+        )
         private String chestSize;  // 가슴 사이즈
         private String sleeveLength;  // 소매 길이
 
