@@ -14,7 +14,7 @@ import java.util.Date;
 @Entity
 @Getter
 @Builder
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 public class Member extends BaseEntity {
 
@@ -44,13 +44,16 @@ public class Member extends BaseEntity {
     @Column(nullable = false)
     private LocalDate birthDate;
 
+    //회원 등급 산정을 위한 포인트
     @Column(nullable = false)
     private int gradePoint;
 
+    //회원 등급 -> 등급별 할인률이 상이함
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Grade grade;
 
+    //적립금
     @Column(nullable = false)
     private int moneyPoint;
 
