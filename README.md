@@ -58,8 +58,8 @@
 <br>
 
 
-## ERD (업데이트 중)
-- 회원관련 ERD 생성
+## ERD
+<img width="1135" alt="스크린샷 2024-10-16 오전 9 51 55" src="https://github.com/user-attachments/assets/051efd29-167d-472d-83ca-e4871e0c94c5">
 
 
 
