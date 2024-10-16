@@ -8,6 +8,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 @Entity
 @Getter
 @Builder
@@ -18,4 +21,26 @@ public class Member extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    private String username;
+
+    private String password;
+
+    private String name;
+
+    private Role role;
+
+    private int phoneNumber;
+
+    private String email;
+
+    private LocalDate birthDate;
+
+    private int gradePoint;
+
+    private Grade grade;
+
+    private int moneyPoint;
+
+    private SocialType socialType;
 }
