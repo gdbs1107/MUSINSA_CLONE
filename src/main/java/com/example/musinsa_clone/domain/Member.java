@@ -1,11 +1,11 @@
 package com.example.musinsa_clone.domain;
 
 import com.example.musinsa_clone.domain.baseEntity.BaseEntity;
+import com.example.musinsa_clone.domain.enumClass.Grade;
+import com.example.musinsa_clone.domain.enumClass.Role;
+import com.example.musinsa_clone.domain.enumClass.SocialType;
 import com.example.musinsa_clone.test.testEntity.Product;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -28,6 +28,7 @@ public class Member extends BaseEntity {
 
     private String name;
 
+    @Enumerated(EnumType.STRING)
     private Role role;
 
     private int phoneNumber;
@@ -38,9 +39,11 @@ public class Member extends BaseEntity {
 
     private int gradePoint;
 
+    @Enumerated(EnumType.STRING)
     private Grade grade;
 
     private int moneyPoint;
 
+    @Enumerated(EnumType.STRING)
     private SocialType socialType;
 }
