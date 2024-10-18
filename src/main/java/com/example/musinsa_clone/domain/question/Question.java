@@ -1,7 +1,8 @@
-package com.example.musinsa_clone.domain;
+package com.example.musinsa_clone.domain.question;
 
 import com.example.musinsa_clone.domain.baseEntity.BaseEntity;
 import com.example.musinsa_clone.domain.enumClass.Status;
+import com.example.musinsa_clone.domain.member.Member;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -23,5 +24,9 @@ public class Question extends BaseEntity {
     private Status status = Status.PUBLIC;
 
     private Boolean isSecret;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "member_id")
+    private Member member;
 
 }

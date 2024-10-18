@@ -1,5 +1,8 @@
-package com.example.musinsa_clone.domain;
+package com.example.musinsa_clone.domain.member;
 
+import com.example.musinsa_clone.domain.Coupon;
+import com.example.musinsa_clone.domain.enumClass.Gender;
+import com.example.musinsa_clone.domain.question.Question;
 import com.example.musinsa_clone.domain.baseEntity.BaseEntity;
 import com.example.musinsa_clone.domain.enumClass.Grade;
 import com.example.musinsa_clone.domain.enumClass.Role;
@@ -8,6 +11,8 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -58,4 +63,20 @@ public class Member extends BaseEntity {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private SocialType socialType;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private Gender gender;
+
+
+    // 매핑 테이블
+
+    @OneToMany(mappedBy = "member",cascade = CascadeType.ALL)
+    private List<Delivery> deliveries=new ArrayList<>();
+
+    @OneToMany(mappedBy = "member",cascade = CascadeType.ALL)
+    private List<Question> questions=new ArrayList<>();
+
+    @OneToMany(mappedBy = "member",cascade = CascadeType.ALL)
+    private List<Coupon> coupons=new ArrayList<>();
 }

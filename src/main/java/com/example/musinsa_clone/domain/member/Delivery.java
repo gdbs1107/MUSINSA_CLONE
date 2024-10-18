@@ -1,10 +1,7 @@
-package com.example.musinsa_clone.domain;
+package com.example.musinsa_clone.domain.member;
 
 import com.example.musinsa_clone.domain.baseEntity.BaseEntity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -25,5 +22,9 @@ public class Delivery extends BaseEntity {
     private String town;
 
     private String details;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "member_id")
+    private Member member;
 
 }
