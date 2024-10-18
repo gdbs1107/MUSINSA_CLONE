@@ -1,7 +1,6 @@
-package com.example.musinsa_clone.domain;
+package com.example.musinsa_clone.domain.member;
 
 import com.example.musinsa_clone.domain.baseEntity.BaseEntity;
-import com.example.musinsa_clone.domain.enumClass.Status;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -10,19 +9,19 @@ import lombok.*;
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class Question extends BaseEntity {
+public class Delivery extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
-    private String content;
-    private String title;
+    private String province;
 
-    @Enumerated(EnumType.STRING)
-    private Status status = Status.PUBLIC;
+    private String city;
 
-    private Boolean isSecret;
+    private String town;
+
+    private String details;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")

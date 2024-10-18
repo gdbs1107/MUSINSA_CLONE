@@ -1,4 +1,4 @@
-package com.example.musinsa_clone.domain;
+package com.example.musinsa_clone.domain.question;
 
 import com.example.musinsa_clone.domain.baseEntity.BaseEntity;
 import jakarta.persistence.*;

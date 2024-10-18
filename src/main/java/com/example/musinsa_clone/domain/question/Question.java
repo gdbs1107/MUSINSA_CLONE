@@ -1,30 +1,29 @@
-package com.example.musinsa_clone.domain;
+package com.example.musinsa_clone.domain.question;
 
 import com.example.musinsa_clone.domain.baseEntity.BaseEntity;
+import com.example.musinsa_clone.domain.enumClass.Status;
 import com.example.musinsa_clone.domain.member.Member;
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.time.LocalDateTime;
 
 @Entity
 @Getter
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class Coupon extends BaseEntity {
+public class Question extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
 
-    private Integer discountPercent;
+    private String content;
+    private String title;
 
-    private LocalDateTime expirationDate;
+    @Enumerated(EnumType.STRING)
+    private Status status = Status.PUBLIC;
 
-    private Integer discountMax;
-
-    private String Description;
+    private Boolean isSecret;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")

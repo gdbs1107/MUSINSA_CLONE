@@ -1,4 +1,4 @@
-package com.example.musinsa_clone.domain;
+package com.example.musinsa_clone.domain.question;
 
 import jakarta.persistence.*;
 import lombok.*;
