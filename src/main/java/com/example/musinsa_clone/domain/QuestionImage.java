@@ -1,6 +1,5 @@
 package com.example.musinsa_clone.domain;
 
-import com.example.musinsa_clone.domain.baseEntity.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -9,22 +8,15 @@ import lombok.*;
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class Delivery extends BaseEntity {
+public class QuestionImage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String province;
-
-    private String city;
-
-    private String town;
-
-    private String details;
+    private String imagePath;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "member_id")
-    private Member member;
-
+    @JoinColumn(name = "question_id")
+    private Question question;
 }

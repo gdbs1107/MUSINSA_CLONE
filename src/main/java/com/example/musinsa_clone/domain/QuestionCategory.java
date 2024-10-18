@@ -9,22 +9,15 @@ import lombok.*;
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class Delivery extends BaseEntity {
+public class QuestionCategory extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String province;
+    //문의 유형
+    private String questionType;
 
-    private String city;
-
-    private String town;
-
-    private String details;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "member_id")
-    private Member member;
-
+    @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    private Question question;
 }
