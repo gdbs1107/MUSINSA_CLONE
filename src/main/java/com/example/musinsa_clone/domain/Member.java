@@ -4,12 +4,10 @@ import com.example.musinsa_clone.domain.baseEntity.BaseEntity;
 import com.example.musinsa_clone.domain.enumClass.Grade;
 import com.example.musinsa_clone.domain.enumClass.Role;
 import com.example.musinsa_clone.domain.enumClass.SocialType;
-import com.example.musinsa_clone.test.testEntity.Product;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 @Entity
 @Getter
