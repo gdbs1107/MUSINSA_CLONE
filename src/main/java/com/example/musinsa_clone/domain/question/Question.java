@@ -3,6 +3,7 @@ package com.example.musinsa_clone.domain.question;
 import com.example.musinsa_clone.domain.baseEntity.BaseEntity;
 import com.example.musinsa_clone.domain.enumClass.Status;
 import com.example.musinsa_clone.domain.member.Member;
+import com.example.musinsa_clone.test.testEntity.Product;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -29,4 +30,7 @@ public class Question extends BaseEntity {
     @JoinColumn(name = "member_id")
     private Member member;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_id")
+    private Product product;
 }
