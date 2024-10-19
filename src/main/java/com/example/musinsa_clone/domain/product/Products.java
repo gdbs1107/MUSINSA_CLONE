@@ -28,6 +28,7 @@ public class Products extends BaseEntity {
 
     private Integer stock;
 
+    //제품에 대한 간단한 설명 -> 자세한 설명은 브랜드 측에서 제작한 이미지로 대체
     private String description;
 
     //배송기간
