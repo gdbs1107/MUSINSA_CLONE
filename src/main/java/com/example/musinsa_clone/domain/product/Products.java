@@ -1,6 +1,7 @@
 package com.example.musinsa_clone.domain.product;
 
 import com.example.musinsa_clone.domain.baseEntity.BaseEntity;
+import com.example.musinsa_clone.domain.brand.Brand;
 import com.example.musinsa_clone.domain.enumClass.Gender;
 import com.example.musinsa_clone.test.testEntity.Category;
 import jakarta.persistence.*;
@@ -43,7 +44,11 @@ public class Products extends BaseEntity {
     private Integer productDiscount;
 
     // 카테고리 연관 관계 (2차 카테고리와 매핑)
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ProductCategory_id")
     private ProductCategory productCategory;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "brand_id")
+    private Brand brand;
 }
