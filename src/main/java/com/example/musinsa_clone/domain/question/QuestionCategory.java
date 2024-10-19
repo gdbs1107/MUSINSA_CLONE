@@ -16,6 +16,7 @@ public class QuestionCategory extends BaseEntity {
     private Long id;
 
     //문의 유형
+    @Column(nullable = false)
     private String questionType;
 
     @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)

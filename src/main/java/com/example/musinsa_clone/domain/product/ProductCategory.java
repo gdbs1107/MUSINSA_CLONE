@@ -20,6 +20,7 @@ public class ProductCategory extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String name; // 카테고리 이름
 
     // 상위 카테고리 (1차 카테고리)
