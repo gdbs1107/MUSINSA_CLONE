@@ -1,7 +1,10 @@
-package com.example.musinsa_clone.domain.member;
+package com.example.musinsa_clone.domain.product;
 
 import com.example.musinsa_clone.domain.baseEntity.BaseEntity;
+import com.example.musinsa_clone.domain.member.Member;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 @Entity
@@ -9,27 +12,25 @@ import lombok.*;
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class Delivery extends BaseEntity {
+public class ProductReview extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
 
-    /* 시/도 */
     @Column(nullable = false)
-    private String province;
+    private String title;
 
-    /* 시/군/구 */
     @Column(nullable = false)
-    private String city;
+    private String content;
 
-    /* 읍/면/동 */
+    @Max(5)
     @Column(nullable = false)
-    private String town;
+    private Integer Score;
 
-    /* 상세주소 */
-    @Column(nullable = false)
-    private String details;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "products_id")
+    private Products products;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")

@@ -1,4 +1,4 @@
-package com.example.musinsa_clone.domain.question;
+package com.example.musinsa_clone.domain.brand;
 
 import com.example.musinsa_clone.domain.baseEntity.BaseEntity;
 import jakarta.persistence.*;
@@ -9,16 +9,15 @@ import lombok.*;
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class QuestionCategory extends BaseEntity {
+public class Brand extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //문의 유형
     @Column(nullable = false)
-    private String questionType;
+    private String name;
 
-    @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-    private Question question;
+    @Column(nullable = false)
+    private String description;
 }
