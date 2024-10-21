@@ -39,7 +39,7 @@ public class Member extends BaseEntity {
     private Role role;
 
     @Column(nullable = false)
-    private int phoneNumber;
+    private String phoneNumber;
 
     @Column(nullable = false)
     private String email;

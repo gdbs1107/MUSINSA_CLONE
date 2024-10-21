@@ -1,7 +1,10 @@
 package com.example.musinsa_clone.web;
 
+import com.example.musinsa_clone.api.ApiResponse;
+import com.example.musinsa_clone.web.dto.MemberJoinDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,7 +15,8 @@ public class MemberController {
 
     //회원가입
     @PostMapping("/join")
-    public void join(@RequestBody Member member) {
+    public ApiResponse<String> join(@RequestBody MemberJoinDTO.JoinRequestDTO request) {
+        return ApiResponse.onSuccess("success");
 
     }
 
