@@ -14,12 +14,16 @@ public class Agree {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Boolean ageAgree;
+    @Column(nullable = false)
+    private Boolean ageAgree = Boolean.TRUE;
 
-    private Boolean musinsaAgree;
+    @Column(nullable = false)
+    private Boolean musinsaAgree = Boolean.TRUE;
 
+    @Column(nullable = false)
     private Boolean adAgree;
 
+    @Column(nullable = false)
     private Boolean marketingAgree;
 
 
