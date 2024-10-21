@@ -19,6 +19,7 @@ public enum ErrorStatus implements BaseErrorCode {
     _FORBIDDEN(HttpStatus.FORBIDDEN, "COMMON1004", "금지된 요청입니다."),
 
     // 멤버 관련 에러
+    // 해당 에러코드는 추후 어노테이션으로 수정 할 예정입니다
     MEMBER_NOT_FOUND(HttpStatus.NOT_FOUND, "MEMBER3001", "사용자가 없습니다.");
 
 
