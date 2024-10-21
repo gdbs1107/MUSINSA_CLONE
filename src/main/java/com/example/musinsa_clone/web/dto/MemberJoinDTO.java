@@ -1,6 +1,7 @@
 package com.example.musinsa_clone.web.dto;
 
 import com.example.musinsa_clone.domain.enumClass.Gender;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
